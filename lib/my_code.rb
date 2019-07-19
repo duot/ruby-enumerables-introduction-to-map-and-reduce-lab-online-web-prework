@@ -28,11 +28,12 @@ def falsey? v
 end
 
 def reduce_to_all_true arr
-  arr.reduce { |all_true?, val|
-    if falsey? val
-      all_true? = false
+  #true will be nil or true
+  arr.reduce { |currently_true, val|
+    if val
+      currently_true = true
     end
-  }
+  } ? true : false
 end
 
 def reduce_to_any_true arr
