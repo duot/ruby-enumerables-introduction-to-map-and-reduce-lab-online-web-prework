@@ -41,6 +41,5 @@ def reduce_to_any_true arr
     if val
       any_truth = true
     end
-    any_truth
   } ? true : false
 end
