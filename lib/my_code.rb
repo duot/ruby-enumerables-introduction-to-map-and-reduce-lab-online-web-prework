@@ -28,7 +28,7 @@ def falsey? v
 end
 
 def reduce_to_all_true arr
-  arr.reduce(true) { |some_falsey, val|
+  arr.reduce(false) { |some_falsey, val|
     if !val
       some_falsey = true
     end
