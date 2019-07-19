@@ -32,6 +32,7 @@ def reduce_to_all_true arr
     if !val
       some_falsey = true
     end
+    some_falsey
     } ? false : true # if any is falsey, then not all are true
 end
 
