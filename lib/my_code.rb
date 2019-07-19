@@ -29,9 +29,9 @@ end
 
 def reduce_to_all_true arr
   #true will be nil or true
-  arr.reduce { |currently_true, val|
-    if val
-      currently_true = true
+  arr.reduce { |some_falsey, val|
+    if !val
+      some_falsey = true
     end
   } ? true : false
 end
